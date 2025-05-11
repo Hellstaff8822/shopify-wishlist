@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Бейсболка -->
+  <path d="M256 64C128 64 64 128 64 256C64 384 128 448 256 448C384 448 448 384 448 256C448 128 384 64 256 64Z" fill="#61DAFB"/>
+  
+  <!-- React атом -->
+  <circle cx="256" cy="256" r="48" fill="white"/>
+  <path d="M256 208C256 208 304 256 352 256C400 256 448 208 448 208" stroke="white" stroke-width="8"/>
+  <path d="M256 304C256 304 304 256 352 256C400 256 448 304 448 304" stroke="white" stroke-width="8"/>
+  <path d="M256 208C256 208 208 256 160 256C112 256 64 208 64 208" stroke="white" stroke-width="8"/>
+  <path d="M256 304C256 304 208 256 160 256C112 256 64 304 64 304" stroke="white" stroke-width="8"/>
+</svg>
