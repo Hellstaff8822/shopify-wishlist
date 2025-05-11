@@ -1,0 +1,22 @@
+{% comment %}
+  Back to Top button
+{% endcomment %}
+<button class="back-to-top">↑ Back to Top</button>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+  }
+  .back-to-top.show {
+    display: block;
+  }
+</style>

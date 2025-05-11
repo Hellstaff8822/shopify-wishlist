@@ -1,0 +1,135 @@
+{% comment %}
+  Custom banner section for the homepage
+{% endcomment %}
+<div class="banner" style="background-image: url('{{ section.settings.banner_image | img_url: '1200x' }}');">
+<!-- Накладка для затемнення фону -->
+  <div class="banner-overlay"></div>
+  <h2>Unleash Your ReactPower!</h2>
+  <p>Grab your exclusive ReactPower caps now!</p>
+</div>
+
+<style>
+  .banner {
+    position: relative; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    margin: 15px 0;
+    border-radius: 8px;
+    z-index: 2;
+    color: #fff; 
+    width: 58%;
+    margin-inline: auto;
+    margin-top: 25px;
+  }
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
+    border-radius: 8px;
+  }
+  .banner h2,
+  .banner p {
+    position: relative; 
+    z-index: 2;
+  }
+  /* Стилі для заголовка з градієнтом і світінням */
+  .banner h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #00ccff; /* Синій колір логотипу React */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.7), 0 0 20px rgba(0, 150, 255, 0.5); /* Ефект свічення */
+    background: linear-gradient(90deg, #00ccff, #99e6ff); /* Градієнтний текст */
+    -webkit-background-clip: text; /* Для підтримки в Webkit */
+    background-clip: text;
+    color: transparent; /* Прозорий текст для градієнта */
+    font-weight: 700;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  /* Стилі для підзаголовка з неоновим контуром і рухомим градієнтом */
+  .banner p {
+    font-size: 16px;
+    color: #fff;
+    font-style: italic;
+    display: inline-block;
+    background: linear-gradient(90deg, #00ccff, #99e6ff); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    -webkit-text-stroke: 1px #00ccff; 
+    text-stroke: 1px #00ccff;
+    text-shadow: 0 0 8px rgba(0, 150, 255, 0.6); 
+    animation: neon-pulse 1.5s ease-in-out infinite alternate, gradient-shift 4s linear infinite;
+  }
+/* Анімація для світіння заголовка */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px rgba(0, 150, 255, 0.7), 0 0 10px rgba(0, 150, 255, 0.5);
+    }
+    to {
+      text-shadow: 0 0 15px rgba(0, 150, 255, 0.9), 0 0 25px rgba(0, 150, 255, 0.7);
+    }
+  }
+ /* Анімація для пульсації неонового контуру */
+  @keyframes neon-pulse {
+    from {
+      -webkit-text-stroke: 1px #00ccff;
+      text-stroke: 1px #00ccff;
+      text-shadow: 0 0 8px rgba(0, 150, 255, 0.6);
+    }
+    to {
+      -webkit-text-stroke: 1.5px #00ccff;
+      text-stroke: 1.5px #00ccff;
+      text-shadow: 0 0 15px rgba(0, 150, 255, 0.9);
+    }
+  }
+ /* Анімація для руху градієнта */
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+
+  .banner p {
+    background-size: 200% 200%; 
+  }
+
+  @media (min-width: 750px) {
+    .banner h2 {
+      font-size: 36px;
+    }
+    .banner p {
+      font-size: 18px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Banner Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Section",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

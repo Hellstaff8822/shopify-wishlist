@@ -1,0 +1,19 @@
+<div class="wishlist-page">
+  <h1 class="wishlist-title">My Wishlist</h1>
+<div id="custom-alert" style="display: none;">
+  <span id="custom-alert-message"></span>
+  <button id="custom-alert-close">×</button>
+</div>
+  <div id="wishlist-content">
+    <div id="wishlist-items"></div>
+    <div id="empty-wishlist" style="display: none; text-align: center; padding: 50px 0;">
+      <h2>Your Wishlist is empty</h2>
+      <a href="{{ shop.url }}" class="continue-shopping" style="display: inline-block; padding: 10px 20px; background-color: rgb(252, 228, 119); color: #333; text-decoration: none; margin-top: 20px;">Continue shopping</a>
+    </div>
+  </div>
+</div>
+
+<script>  
+window.deleteIconUrl = "{{ 'delete.svg' | asset_url }}";
+</script>
+
